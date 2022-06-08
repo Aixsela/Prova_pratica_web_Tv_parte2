@@ -1,0 +1,18 @@
+<h2 class="sottotitolo">Film più popolari</h2>
+
+
+<div class="container" *ngIf="films">
+    <div class="card_film" *ngFor="let film of films.items">
+        <a class="cardLink" routerLink="/film/{{film.id}}">
+            <img class="cardImg" src="{{film.image}}" alt="{{film.title}}">
+            <h5 class="titoloCard">{{film.title}}</h5>
+        </a>
+        <div class="card-detail">
+            <p id="anno">Anno: {{film.year}}</p>
+            <p id="id">Id: {{film.id}}</p>
+        </div>
+    </div>
+</div>
+
+
+

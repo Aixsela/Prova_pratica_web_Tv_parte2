@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "pippo@pippo.it",
+      "password": "$2a$10$Gaj6LIF.YamOwP2GUBw9Je/rT/gc4uufgHROsudiIY5Vk4uqZtFUe",
+      "id": 1
+    },
+    {
+      "email": "pluto@pluto.it",
+      "password": "$2a$10$KR4HyGM/iajM/adAEyVaxuSoJfvD9UnbCA91K5yajTBhHZZmXmGuC",
+      "id": 2
+    }
+  ],
+  "posts": []
+}

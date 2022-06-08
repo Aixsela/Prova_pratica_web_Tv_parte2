@@ -1,0 +1,18 @@
+<header>
+    <nav>
+        <div class="container">
+            <img id="logoTv" src="/assets/logo-tipo.png" alt="Logo LabTV">
+
+            <ul class="menu">
+                <li *ngFor="let menu of menus">
+                    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    routerLink="{{menu.path}}">{{menu.name}}</a>
+                </li>
+                <li>
+                    <input type="search" placeholder="Cerca film">
+                    <a routerLink="" routerLinkActive="active"> Cerca</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
