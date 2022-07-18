@@ -8,8 +8,9 @@ import { Films, Scheda, Trailer } from './models/film';
 })
 export class FilmsService {
 
-  
+  titolo: string = "";
 
+  
   constructor(private http: HttpClient) { }
 
   getFilms(): Observable<Films> {
@@ -22,29 +23,20 @@ export class FilmsService {
   
   getSchedaByFilmId(id: string): Observable<Scheda> {
     // return this.http.get<Scheda>("https://imdb-api.com/it/API/Title/k_9v017wai/" + id)
-    return this.http.get<Scheda>("https://imdb-api.com/it/API/Title/k_vvt78sm2/" + id)
+    return this.http.get<Scheda>("http://localhost:4200/assets/film_detail.json/")
       .pipe(
         catchError(this.handleError<Scheda>("getSchedaByFilmId"))
       )
   }
 
   getTrailerByfilmId(id: string): Observable<Trailer> {
-    // return this.http.get<Scheda>("https://imdb-api.com/it/API/Title/k_9v017wai/" + id)
-    return this.http.get<Trailer>("https://imdb-api.com/it/API/Title/k_vvt78sm2/" + id)
+    // return this.http.get<Trailer>("https://imdb-api.com/it/API/YouTubeTrailer/k_9v017wai/" + id)
+    return this.http.get<Trailer>("http://localhost:4200/assets/trailer.json/")
       .pipe(
         catchError(this.handleError<Trailer>("getTrailerByFilmId"))
       )
   }
 
-
-
-  // getActorList(name: string): Observable<ActorList> {
-  //   // return this.http.get<Films>("https://imdb-api.com/en/API/MostPopularMovies/k_9v017wai")
-  //   return this.http.get<ActorList>("http://imdb-api.com/it/API/Title/k_vvt78sm2/")
-  //     .pipe(
-  //       catchError(this.handleError<ActorList>("getActorList"))
-  //     )
-  // };
 
   
 

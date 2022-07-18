@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web_tv';
+
+  // readRicerca(stringa: string){
+  //   console.log(stringa)
+  // }
+
 }

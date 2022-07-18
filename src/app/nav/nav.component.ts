@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit, SimpleChanges } from '@angular/core';
+import { FilmsService } from '../films.service';
 import { Menu } from '../models/menu';
 
 @Component({
@@ -12,13 +13,25 @@ export class NavComponent implements OnInit {
   menus: Menu[] = [
     { path: "", name: "Home" },
     { path: "/login", name: "Login" },
-    { path: "/contatti", name: "Contatti" },
+    { path: "/contacts", name: "Contatti" }
   ];
 
-  constructor() { }
+  constructor(public filmsService: FilmsService) { }
 
-  ngOnInit(): void {
+  visualizzaRicerca = false;
+
+  ngOnInit(): void {}
+
+
+  //visualizzo o nascondo l'input di ricerca
+  cerca(){
+    this.visualizzaRicerca = ! this.visualizzaRicerca 
   }
+
+ 
+
+
+ 
 
   
 

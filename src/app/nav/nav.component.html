@@ -6,11 +6,14 @@
             <ul class="menu">
                 <li *ngFor="let menu of menus">
                     <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                    routerLink="{{menu.path}}">{{menu.name}}</a>
+                      (click)="filmsService.titolo=''" routerLink="{{menu.path}}">{{menu.name}}</a>
                 </li>
                 <li>
-                    <input type="search" placeholder="Cerca film">
-                    <a routerLink="" routerLinkActive="active"> Cerca</a>
+                    <div class="ricerca" *ngIf="visualizzaRicerca">
+                    <input [(ngModel)]="filmsService.titolo" type="text" placeholder="Inserisci titolo film">
+                    </div>
+                    <a routerLink="" routerLinkActive="active" (click)="cerca()" (click)="filmsService.titolo=''">
+                      Cerca</a>
                 </li>
             </ul>
         </div>

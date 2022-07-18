@@ -1,0 +1,46 @@
+<section class="registrazione">
+  
+  <form  [formGroup]="registerForm" (ngSubmit)="registerUser()">
+
+    <h1>Registrati</h1>
+
+    <input type="text" placeholder="Inserisci nome" name="nome" required  formControlName="nome">
+
+    <br>
+
+    <input type="text" placeholder="Inserisci cognome" name="cognome" required  formControlName="cognome">
+
+    <br>
+
+    <input type="email" placeholder="Email" name="email" required  formControlName="email">
+    <small style="color: red;" class="errore" *ngIf="email && email.invalid && email.touched">Email non valida</small>
+    
+    <br>
+
+    <input type="password" placeholder="Password" name="password" required formControlName="password">
+    <small style="color: red;" class="errore"
+      *ngIf="password && password.invalid && password.touched">
+      Password non valida
+    </small>
+     
+    <br>
+
+    <input type="password" placeholder="Conferma password" name="confermaPassword" required formControlName="confermaPassword">
+     <small style="color: red;" class="errore"
+       *ngIf="confermaPassword && confermaPassword.invalid && confermaPassword.touched || registerForm.errors">
+      Le password non coincidono
+     </small>
+    
+    <br>
+
+    <input class="checkbox" type="checkbox" checked="checked" name="accetta_privacy"> Accetta l'informatica
+    privacy
+    <br>
+    <button type="submit">Registrami</button>
+    
+    
+
+
+
+  </form>
+</section>

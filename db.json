@@ -1,15 +1,32 @@
 {
   "users": [
     {
-      "email": "pippo@pippo.it",
-      "password": "$2a$10$Gaj6LIF.YamOwP2GUBw9Je/rT/gc4uufgHROsudiIY5Vk4uqZtFUe",
+      "email": "ale@ale.it",
+      "password": "$2a$10$wyQVcMU68LhUrHRUKVnFl.Rp4tB/NhRmMtcjehAX.8yYiaScHuM..",
+      "nome": "Alessia",
+      "cognome": "Manto",
+      "ripetiPassword": "ale123",
       "id": 1
     },
     {
-      "email": "pluto@pluto.it",
-      "password": "$2a$10$KR4HyGM/iajM/adAEyVaxuSoJfvD9UnbCA91K5yajTBhHZZmXmGuC",
+      "email": "pippo@pippo.it",
+      "password": "$2a$10$ICOe0fwT8wCQD1ScQyi2zuetBiowwoWBD/5QNutK/.HzZzYJQxUZe",
       "id": 2
+    },
+    {
+      "email": "pluto@pluto.it",
+      "password": "$2a$10$kATkFuwHghcZwNUmEexAk.v4owiYP6ikRPoVA3TUf4Fr65N3wjUXW",
+      "nome": "Pluto",
+      "cognome": "pluto",
+      "id": 3
+    },
+    {
+      "email": "paperino@test.it",
+      "password": "$2a$10$AKZz7mC4xMIk4yOjRdOXAu7BAP0XPD1/26XfteM5sTtqD6UrKcpNK",
+      "nome": "Paperino",
+      "cognome": "paperino",
+      "id": 4
     }
   ],
-  "posts": []
+  "film-acquistati": []
 }

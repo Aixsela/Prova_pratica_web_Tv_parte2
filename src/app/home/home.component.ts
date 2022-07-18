@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { FilmsService } from '../films.service';
-import { Film, Films} from '../models/film';
+import { Films } from '../models/film';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +10,14 @@ import { Film, Films} from '../models/film';
 })
 export class HomeComponent implements OnInit {
 
-  // film: Film[] = [];
-
   films?: Films;
 
+  constructor(public filmsService: FilmsService, private route: ActivatedRoute) { }
+     
+  ngOnInit(): void {  
 
-  constructor(private filmsService: FilmsService) { }
-
-  ngOnInit(): void {
-    this.filmsService.getFilms().subscribe(risposta => this.films = risposta)
+    //Prendo il catalogo dei film
+    this.filmsService.getFilms().subscribe(risposta => this.films = risposta);
   }
 
 }

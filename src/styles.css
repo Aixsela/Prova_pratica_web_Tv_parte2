@@ -19,7 +19,7 @@
 }
 
 .page-style {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 1em 0;
 }
@@ -34,6 +34,7 @@ body {
 }
 
 
+
 /* Navbar */
 
 nav {
@@ -42,11 +43,11 @@ nav {
 }
 
 nav img {
-    width: 15%;
+    width: 200px;
 }
 
 nav .container {
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content:space-between;
@@ -62,6 +63,10 @@ nav .container {
     display: inline;
     margin-right: 1.2em;
     color: black;
+}
+
+.menu li:last-child {
+    margin-right: 0;
 }
 
 .menu li a {
@@ -80,7 +85,7 @@ nav .container {
 }
 
 .menu .ricerca {
-    display: none;
+    display: inline;
 }
 
 .menu input {
@@ -103,19 +108,20 @@ nav .container {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    gap: 1.5rem;
 }
 
 .card_film {
-    margin-top: 2rem;
-    width: 12%;
-    margin-right: 10px;
+    width: 15%;
     background-color: rgb(33, 33, 33);
+    border-radius: 5px;
+    border: solid 1px rgb(50, 50, 50);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 0.8s;
-    
+    overflow: hidden;
 }
 
 .card_film:hover {
@@ -134,14 +140,13 @@ nav .container {
     padding: 0.5em;
     color: white;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .card-detail {
     padding-top: 0.8em;
     font-size: x-small;
 }
-
-
 
 
 
@@ -191,27 +196,238 @@ nav .container {
 #schedaFilm .trailer:hover {
     background-color:rgb(255, 0, 106);
     color: black;
+    cursor: pointer;
 }
+
+
 
 #schedaFilm .guarda {
     display: none;
 }
 
-.containerTrailer {
-
-    width: 50%;
+.containerFilmSimili {
+    word-wrap: break-word;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1%;
 }
 
+.filmSimili {
+    width: 10%;
+    text-align: center;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-.containerT {
+.filmSimili img {
     width: 100%;
 }
 
+.containerTrailer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.836);
+    display: none;
+}
+
+.trailerPosition {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 30px;
+}
+
+.visibile {
+    display: block;
+}
+/* 
+iframe {
+    position: fixed;
+} */
+
+.close {
+    width: 30px;
+    background-color: white;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 15px;
+    right: 140px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close:hover {
+    background-color: rgb(255, 0, 106);
+    color: black;
+}
 
 
 
 
+/* Form login */
 
+.login {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.login form {
+    width: 500px;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.login form h1 {
+    text-align: center;
+}
+
+.login form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.login form input.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.login form button {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+}
+
+.login form button:hover {
+    background-color: rgb(204, 204, 204);
+    color: rgb(0, 0, 0);
+}
+
+.login form .option {
+    text-align: center;
+}
+
+.login form .option #registrati {
+    text-align: center;
+    color: black;
+}
+
+.login form .option #registrati a {
+    color: black;
+    line-height: 2em;
+}
+
+
+
+/* Form registrazione */
+
+.registrazione {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.registrazione form {
+    width: 500px;
+    background-color: white;
+    color: black;
+    padding: 50px;
+    margin:  0 auto;
+}
+
+.registrazione form h1 {
+    text-align: center;
+}
+
+.registrazione form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.registrazione form input.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.registrazione form button {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+}
+
+.registrazione form button:hover {
+    background-color: rgb(204, 204, 204);
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* Form contatti */
+
+.invia_contatti {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.invia_contatti form {
+    width: 500px;
+    background-color: white;
+    color: black;
+    padding: 50px;
+}
+
+.invia_contatti form h2 {
+    color: black;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.invia_contatti form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.invia_contatti form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+}
+
+form button:hover {
+    background-color: rgb(204, 204, 204);
+    color: rgb(0, 0, 0);
+}
 
 
 
@@ -221,7 +437,7 @@ nav .container {
 
 footer{
     padding: 30px;
-    text-align: center
+    text-align: center;
 }
 
 footer ul {
@@ -248,5 +464,57 @@ footer ul li a:hover {
     color: rgba(255, 0, 106);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* media query inferiore ai 650px */
+
+@media screen and (max-width: 650px) {
+    nav .container {
+        max-width: 100%;
+        display: block;
+        text-align: center;
+        padding: 1% 0 0 0;
+    }
+
+    nav img {
+        width: 150px;
+        margin-bottom: 20px;
+    }   
+
+    .menu {
+        margin: 0;
+    }
+
+    .menu li {
+        display: block;
+        border-top: 1px solid black;
+        margin: 0;
+        padding: 5px;
+    }
+
+     .menu li:hover {
+        background-color: white;
+        font-weight: bold;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+    }
+
+     .menu li a:hover {
+       color: black;
+    }
+
+    .card_film {
+        width: 25%;
+    }
+
+    .titoloCard {
+        padding: 0.5em;
+        color: white;
+        text-align: center;
+    }
+}
+
